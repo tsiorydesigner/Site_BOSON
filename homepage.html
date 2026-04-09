@@ -1,0 +1,578 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOSON - Meubles sur Mesure en Mélamine</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <!-- Left Side with Gradient -->
+        <div class="hero-left">
+            <!-- Decorative Circles -->
+            <div class="deco-circle-1"></div>
+            <div class="deco-circle-2"></div>
+
+            <!-- Navigation -->
+            <nav class="navbar">
+                <a href="#" class="logo">BOSON</a>
+                
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Galerie</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+                <div class="nav-controls">
+                    <select class="language-selector" onchange="changeLanguage(this.value)">
+                        <option value="fr">FR</option>
+                        <option value="en">EN</option>
+                        <option value="mg">MG</option>
+                    </select>
+                    
+                    <button class="cart-btn" onclick="toggleCart()" title="Panier">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cart-count">0</span>
+                    </button>
+                    
+                    <button class="wishlist-btn" onclick="toggleWishlist()" title="Favoris">
+                        <i class="far fa-heart"></i>
+                        <span class="wishlist-count" id="wishlist-count">0</span>
+                    </button>
+                </div>
+
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Modern Furniture<br>for Your <span class="accent">House</span>
+                </h1>
+                <p class="hero-description">
+                    Découvrez notre collection exclusive de meubles modernes qui transforment votre espace en un chef-d'œuvre de design et de confort.
+                </p>
+                <a href="#" class="btn-buy-now">Buy Now</a>
+            </div>
+
+
+        </div>
+
+        <!-- Right Side with Image -->
+        <div class="hero-right">
+            <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=1600&h=1200&fit=crop" 
+                 alt="Modern White Kitchen" 
+                 class="hero-image">
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <h2 class="section-title">Pourquoi Nous Choisir?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-couch"></i></div>
+                <h3>Qualité Premium</h3>
+                <p>Matériaux de la plus haute qualité pour une durabilité et une élégance durables.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-paint-brush"></i></div>
+                <h3>Design Moderne</h3>
+                <p>Des designs contemporains qui s'adaptent parfaitement à tout espace intérieur.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-truck"></i></div>
+                <h3>Livraison Rapide</h3>
+                <p>Livraison rapide et sécurisée directement chez vous.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-headset"></i></div>
+                <h3>Support 24/7</h3>
+                <p>Service client dédié disponible à tout moment.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="services-container">
+            <div class="services-content">
+                <h2>Nos <span class="accent-text">Services</span></h2>
+                <p>Bienvenue chez BOSON, basée à Antananarivo ! Nous sommes spécialisés dans la création de meubles sur mesure en mélamine de haute qualité. Au-delà des meubles, nous vous proposons aussi une gamme complète de solutions d'aménagement intérieur pour transformer votre espace.</p>
+                
+                <ul class="services-list">
+                    <li>Conception personnalisée de meubles</li>
+                    <li>Meubles en mélamine de haute qualité</li>
+                    <li>Livraison et installation gratuite</li>
+                    <li>Garantie de 5 ans sur tous les produits</li>
+                    <li>Consultation design gratuite</li>
+                    <li>Finitions premium et personnalisées</li>
+                </ul>
+            </div>
+            <div class="services-image">
+                <img src="image/nos-service.jpg" alt="Meubles personnalisÃ©s">
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="gallery-container">
+            <h2 class="section-title">Galerie de Meubles</h2>
+            <div class="gallery-grid">
+                <div class="gallery-card" onclick="openModal(1)" data-images="1">
+                    <div class="gallery-image-wrapper">
+                        <img src="image/buffet bas-01.jpg" alt="buffet bas">
+                        <span class="gallery-badge">1 image</span>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Buffet bas</h3>
+                        <p>Buffet bas en mélamine avec finition premium et rangement optimisé</p>
+                        <span class="gallery-price">Ã€ partir de 850.000 Ar</span>
+                    </div>
+                </div>
+
+                <div class="gallery-card" onclick="openModal(2)" data-images="2">
+                    <button class="wishlist-btn-card" data-product-id="2" onclick="addToWishlist(2, event)">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <div class="gallery-image-wrapper">
+                        <img src="image/buffet haut-01.jpg" alt="buffet haut">
+                        <span class="gallery-badge">2 images</span>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Buffet haut</h3>
+                        <p>Buffet haut spacieux idÃ©al pour un espace de rangement moderne et pratique</p>
+                        <span class="gallery-price">Ã€ partir de 650.000 Ar</span>
+                    </div>
+                </div>
+
+                <div class="gallery-card" onclick="openModal(3)" data-images="2">
+                    <button class="wishlist-btn-card" data-product-id="3" onclick="addToWishlist(3, event)">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <div class="gallery-image-wrapper">
+                        <img src="image/bureau sous escalier-01.jpg" alt="bureau sous escalier">
+                        <span class="gallery-badge">2 images</span>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Bureau sous escalier</h3>
+                        <p>Bureau design parfait pour maximiser votre espace sous escalier</p>
+                        <span class="gallery-price">À partir de 550.000 Ar</span>
+
+                    </div>
+                </div>
+
+                <div class="gallery-card" onclick="openModal(4)" data-images="1">
+                    <button class="wishlist-btn-card" data-product-id="4" onclick="addToWishlist(4, event)">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <div class="gallery-image-wrapper">
+                        <img src="image/Chaise de bureau noir.jpg" alt="Chaise de bureau noir">
+                        <span class="gallery-badge">1 image</span>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Chaise de bureau noir</h3>
+                        <p>Chaise de bureau moderne en mélamine avec finitions raffinées</p>
+                        <span class="gallery-price">À partir de 500.000 Ar</span>
+
+                    </div>
+                </div>
+
+                <div class="gallery-card" onclick="openModal(5)" data-images="1">
+                    <button class="wishlist-btn-card" data-product-id="5" onclick="addToWishlist(5, event)">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <div class="gallery-image-wrapper">
+                        <img src="image/comptoir d'accueil.jpg" alt="comptoir d'accueil">
+                        <span class="gallery-badge">1 image</span>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Comptoir d'accueil</h3>
+                        <p>Comptoir d'accueil spacieux avec étagères intégrées et finitions élégantes</p>
+                        <span class="gallery-price">À partir de 750.000 Ar</span>
+
+                    </div>
+                </div>
+
+                <div class="gallery-card" onclick="openModal(6)" data-images="3">
+                    <button class="wishlist-btn-card" data-product-id="6" onclick="addToWishlist(6, event)">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <div class="gallery-image-wrapper">
+                        <img src="image/lampe de table en bois-01.jpg" alt="lampe de table en bois">
+                        <span class="gallery-badge">3 images</span>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Lampe de table en bois</h3>
+                        <p>Lampe de table en bois équipée d'un éclairage moderne et discret</p>
+                        <span class="gallery-price">À partir de 1.100.000 Ar</span>
+
+                    </div>
+                </div>
+
+                <div class="gallery-card" onclick="openModal(7)" data-images="4">
+                    <button class="wishlist-btn-card" data-product-id="7" onclick="addToWishlist(7, event)">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <div class="gallery-image-wrapper">
+                        <img src="image/meuble de salle de bain-01.jpg" alt="meuble de salle de bain">
+                        <span class="gallery-badge">4 images</span>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Meuble de salle de bain</h3>
+                        <p>Meuble de salle de bain complet en mélamine avec tous les équipements</p>
+                        <span class="gallery-price">À partir de 1.200.000 Ar</span>
+
+                    </div>
+                </div>
+
+                <div class="gallery-card" onclick="openModal(8)" data-images="1">
+                    <button class="wishlist-btn-card" data-product-id="8" onclick="addToWishlist(8, event)">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <div class="gallery-image-wrapper">
+                        <img src="image/mini chaise de conférence.jpg" alt="mini chaise de conférence">
+                        <span class="gallery-badge">1 image</span>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Mini chaise de conférence</h3>
+                        <p>Mini chaise de conférence compacte avec rangements intégrés</p>
+                        <span class="gallery-price">À partir de 875.000 Ar</span>
+
+                    </div>
+                </div>
+
+                <div class="gallery-card" onclick="openModal(9)" data-images="2">
+                    <button class="wishlist-btn-card" data-product-id="9" onclick="addToWishlist(9, event)">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <div class="gallery-image-wrapper">
+                        <img src="image/Montre en Bois-01.jpg" alt="Montre en Bois">
+                        <span class="gallery-badge">2 images</span>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Montre en bois</h3>
+                        <p>Montre en bois avec finition artisanale et rangement optimisé</p>
+                        <span class="gallery-price">À partir de 850.000 Ar</span>
+
+                    </div>
+                </div>
+
+                <div class="gallery-card" onclick="openModal(10)" data-images="4">
+                    <button class="wishlist-btn-card" data-product-id="10" onclick="addToWishlist(10, event)">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <div class="gallery-image-wrapper">
+                        <img src="image/porte de style grange-01.jpg" alt="porte de style grange">
+                        <span class="gallery-badge">4 images</span>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Porte de style grange</h3>
+                        <p>Porte de style grange design avec finitions rustiques et modernes</p>
+                        <span class="gallery-price">À partir de 550.000 Ar</span>
+
+                    </div>
+                </div>
+
+                <div class="gallery-card" onclick="openModal(11)" data-images="1">
+                    <button class="wishlist-btn-card" data-product-id="11" onclick="addToWishlist(11, event)">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <div class="gallery-image-wrapper">
+                        <img src="image/Porte.jpg" alt="Porte">
+                        <span class="gallery-badge">1 image</span>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Porte</h3>
+                        <p>Porte en mélamine avec finitions premium</p>
+                        <span class="gallery-price">À partir de 500.000 Ar</span>
+
+                    </div>
+                </div>
+
+                <div class="gallery-card" onclick="openModal(12)" data-images="1">
+                    <button class="wishlist-btn-card" data-product-id="12" onclick="addToWishlist(12, event)">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <div class="gallery-image-wrapper">
+                        <img src="image/Pose casque.jpg" alt="Pose casque">
+                        <span class="gallery-badge">1 image</span>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Pose casque</h3>
+                        <p>Support pose casque  et cablage discret</p>
+                        <span class="gallery-price">A partir de 750.000 Ar</span>
+
+                    </div>
+                </div>
+
+                <div class="gallery-card" onclick="openModal(13)" data-images="1">
+                    <button class="wishlist-btn-card" data-product-id="13" onclick="addToWishlist(13, event)">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <div class="gallery-image-wrapper">
+                        <img src="image/Table a manger.jpg" alt="Table à manger">
+                        <span class="gallery-badge">1 image</span>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Table à manger</h3>
+                        <p>Table à manger équipée de rangements pratiques et discrets</p>
+                        <span class="gallery-price">À partir de 1.100.000 Ar</span>
+
+                    </div>
+                </div>
+
+                <div class="gallery-card" onclick="openModal(14)" data-images="1">
+                    <button class="wishlist-btn-card" data-product-id="14" onclick="addToWishlist(14, event)">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <div class="gallery-image-wrapper">
+                        <img src="image/Table de bureau élégant.jpg" alt="Table de bureau élégant">
+                        <span class="gallery-badge">1 image</span>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Table de bureau élégant</h3>
+                        <p>Table de bureau élégante personnalisée avec miroir et finitions intégrées</p>
+                        <span class="gallery-price">À partir de 950.000 Ar</span>
+
+                    </div>
+                </div>
+
+                <div class="gallery-card" onclick="openModal(15)" data-images="1">
+                    <button class="wishlist-btn-card" data-product-id="15" onclick="addToWishlist(15, event)">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <div class="gallery-image-wrapper">
+                        <img src="image/table de bureau.jpg" alt="Table de bureau">
+                        <span class="gallery-badge">1 image</span>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Table de bureau</h3>
+                        <p>Table de bureau complète en mélamine avec tous les équipements</p>
+                        <span class="gallery-price">À partir de 1.200.000 Ar</span>
+
+                    </div>
+                </div>
+
+                <div class="gallery-card" onclick="openModal(16)" data-images="3">
+                    <button class="wishlist-btn-card" data-product-id="16" onclick="addToWishlist(16, event)">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <div class="gallery-image-wrapper">
+                        <img src="image/Table restaurant-01.jpg" alt="Table restaurant">
+                        <span class="gallery-badge">3 images</span>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Table de restaurant</h3>
+                        <p>Table de restaurant compacte avec rangements intégrés</p>
+                        <span class="gallery-price">À partir de 875.000 Ar</span>
+
+                    </div>
+                </div>
+
+                <div class="gallery-card" onclick="openModal(17)" data-images="1">
+                    <button class="wishlist-btn-card" data-product-id="17" onclick="addToWishlist(17, event)">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <div class="gallery-image-wrapper">
+                        <img src="image/Vestiaire d'entrée.jpg" alt="Vestiaire d'entrée">
+                        <span class="gallery-badge">1 image</span>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Vestiaire d'entrée</h3>
+                        <p>Vestiaire d'entrée avec finition artisanale et rangement optimisé</p>
+                        <span class="gallery-price">À partir de 850.000 Ar</span>
+
+                    </div>
+                </div>
+
+                <div class="gallery-card" onclick="openModal(18)" data-images="2">
+                    <button class="wishlist-btn-card" data-product-id="18" onclick="addToWishlist(18, event)">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <div class="gallery-image-wrapper">
+                        <img src="image/étagère-01.jpg" alt="Étagère">
+                        <span class="gallery-badge">2 images</span>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Étagère</h3>
+                        <p>Étagère design parfaite pour maximiser votre espace de rangement</p>
+                        <span class="gallery-price">A partir de 550.000 Ar</span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal pour afficher les images -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Titre du Meuble</h2>
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-gallery">
+                <img id="modalImage" src="" alt="Image du meuble" class="modal-image">
+                <button class="prev-btn" onclick="previousImage()">&#10094;</button>
+                <button class="next-btn" onclick="nextImage()">&#10095;</button>
+                <div class="image-counter">
+                    <span id="currentImageIndex">1</span> / <span id="totalImages">1</span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p class="modal-description" id="modalDescription">Description</p>
+                <p class="modal-price" id="modalPrice">Prix</p>
+                <div class="modal-thumbnails" id="thumbnailsContainer"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Panier d'Achat</h2>
+                <button class="close-btn" onclick="closeCart()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="cart-items" class="cart-items-container">
+                    <p class="empty-cart">Votre panier est vide</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="cart-summary">
+                    <h3>Total: <span id="total-price">0 Ar</span></h3>
+                    <button class="btn-checkout">ProcÃ©der au paiement</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wishlist Modal -->
+    <div id="wishlistModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Mes Favoris</h2>
+                <button class="close-btn" onclick="closeWishlist()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="wishlist-items" class="wishlist-items-container">
+                    <p class="empty-wishlist">Aucun article en favoris</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <!-- Footer Top - Main Content -->
+        <div class="footer-top">
+            <div class="footer-container">
+                <!-- About Section -->
+                <div class="footer-section footer-about">
+                    <div class="footer-logo">
+                        <span class="logo-icon">🛋️</span>
+                        <h3>BOSON</h3>
+                    </div>
+                    <p>Transformez votre maison avec nos meubles haut de gamme, alliant style moderne et confort inégalé. BOSON, l'excellence du design à Madagascar.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" title="Pinterest"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" class="social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <!-- Services Section -->
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#gallery">Galerie de Produits</a></li>
+                        <li><a href="#services">Conception Personnalisée</a></li>
+                        <li><a href="#">Livraison Gratuite</a></li>
+                        <li><a href="#">Installation</a></li>
+                        <li><a href="#">Garantie 5 Ans</a></li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links Section -->
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Accueil</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#gallery">Galerie</a></li>
+                        <li><a href="#">À Propos</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="footer-section footer-contact">
+                    <h4>Contact</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <p class="label">Localisation</p>
+                            <p>Ampefiloha, Antananarivo</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <p class="label">Téléphone</p>
+                            <p>+261 34 00 000 00</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <p class="label">Email</p>
+                            <p>contact@boson.mg</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Section -->
+            <div class="footer-map-section">
+                <div class="footer-map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.20818274116!2d47.5134768759567!3d-18.91113040810344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21f07df52077e641%3A0xc39f9976378c805a!2sAmpefiloha%2C%20Antananarivo!5e0!3m2!1sfr!2smg!4v1712652000000!5m2!1sfr!2smg" 
+                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom - Copyright -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p>&copy; 2026 BOSON | Tous droits réservés</p>
+                <div class="footer-links-bottom">
+                    <a href="#">Conditions d'utilisation</a>
+                    
+                    <a href="#">Politique de confidentialité</a>
+                    <span class="separator"></span>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+# Robots.txt for BOSON Furniture Website
+# Generated: 2024-01-15
+
+# Allow all robots
+User-agent: *
+Allow: /
+
+# Disallow sensitive areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+
+# Allow indexing of specific directories
+Allow: /css/
+Allow: /js/
+Allow: /image/
+
+# Sitemap location
+Sitemap: https://boson-furniture.mg/sitemap.xml
+
+# Crawl delay (in seconds)
+Crawl-delay: 1
+
+# Request rate
+Request-rate: 30/60
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
